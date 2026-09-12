@@ -1,25 +1,13 @@
 {
   "name": "jvs-sh",
-  "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro build && wrangler dev",
-    "deploy": "astro build && wrangler deploy",
-    "check": "astro check && wrangler types --check",
-    "test": "vitest run"
-  },
-  "dependencies": {
-    "@astrojs/cloudflare": "^14.1.6",
-    "@astrojs/sitemap": "^3.7.3",
-    "astro": "^7.1.5"
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10",
-    "typescript": "^6.0.3",
-    "vitest": "^4.1.11",
     "wrangler": "^4.125.0"
   }
 }
