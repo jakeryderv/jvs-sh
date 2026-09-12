@@ -36,9 +36,11 @@ MIT, see [LICENSE](LICENSE).
 
 ## Notes
 
-The background uses `public/media/iss-background.mp4`, a 720p H.264 web copy of
+The background uses `public/media/iss-background.mp4`, a 720p60 H.264 web copy of
 `ISS_20251112_071350-20251112_073549_1080p30.mp4`. The original stays local and is
-ignored by Git. Playback is muted and looping, with a pause control in the footer.
+ignored by Git. FFmpeg's `minterpolate` filter adds motion-compensated intermediate
+frames, giving 30 frames per second at the 50% playback speed. Playback is muted
+and looping, with a pause control in the footer.
 Reduced motion shows `public/media/iss-poster.jpg` without downloading the video;
 the poster also works when JavaScript or autoplay is unavailable.
 
