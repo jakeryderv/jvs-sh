@@ -6,6 +6,3 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-Permitted-Cross-Domain-Policies: none
-
-/_astro/*
-  Cache-Control: public, max-age=31536000, immutable

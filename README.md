@@ -28,3 +28,10 @@ npm run deploy
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+## Notes
+
+Do not add a long-lived `Cache-Control` rule for `/_astro/*` in `public/_headers`. The rule
+also applies to 404 responses under that path, so an asset URL requested during a deploy
+rollout can get its 404 cached at the edge for the full max-age. The default asset headers
+(ETag plus revalidation) are safe.
