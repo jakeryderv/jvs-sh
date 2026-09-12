@@ -3,7 +3,7 @@
   "name": "jvs-sh",
   "compatibility_date": "2026-07-01",
   // Astro's static build output. No Worker script, no `main`.
-  "assets": { "directory": "./dist" },
+  "assets": { "directory": "./dist", "not_found_handling": "404-page" },
   "workers_dev": false,
   "routes": [{ "pattern": "jvs.sh", "custom_domain": true }],
 }
