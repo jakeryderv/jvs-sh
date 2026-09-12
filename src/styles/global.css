@@ -40,6 +40,7 @@ header {
   align-items: baseline;
   gap: var(--space-sm) var(--space-lg);
   padding-block: var(--space-lg);
+  border-bottom: 1px solid var(--border);
 }
 
 header .brand {

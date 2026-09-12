@@ -1,0 +1,22 @@
+---
+import { CONTACT_EMAIL, GITHUB_URL } from '../consts';
+---
+
+<section class="intro">
+  <h1>Jake Van Slyke</h1>
+  <p>Applied AI student.</p>
+  <p class="links">
+    <a href={GITHUB_URL}>github</a>
+    <a href={`mailto:${CONTACT_EMAIL}`}>email</a>
+  </p>
+</section>
+
+<style>
+  .intro p {
+    color: var(--muted);
+  }
+  .links {
+    display: flex;
+    gap: var(--space-md);
+  }
+</style>
