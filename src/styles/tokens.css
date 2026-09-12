@@ -1,16 +1,17 @@
 /* Design tokens. Everything else consumes these; nothing else declares colors. */
 :root {
-  color-scheme: light dark;
+  /* Dark only. */
+  color-scheme: dark;
 
   /* Neutral surfaces with one teal accent. */
-  --bg: #fafaf9;
-  --surface: #f2f2f0;
-  --fg: #18181b;
-  --muted: #6b6b70;
-  --border: #e4e4e2;
-  --accent: #0f766e;
-  --accent-hover: #115e59;
-  --grid: rgb(0 0 0 / 0.06);
+  --bg: #111113;
+  --surface: #1a1a1d;
+  --fg: #ededef;
+  --muted: #9a9aa0;
+  --border: #2a2a2e;
+  --accent: #2dd4bf;
+  --accent-hover: #5eead4;
+  --grid: rgb(255 255 255 / 0.06);
 
   /* Type. Geist is self-hosted through @fontsource-variable; the stacks fall back to system. */
   --font-sans: 'Geist Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -29,17 +30,4 @@
   --space-lg: 1.5rem;
   --space-xl: 3rem;
   --radius: 6px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #111113;
-    --surface: #1a1a1d;
-    --fg: #ededef;
-    --muted: #9a9aa0;
-    --border: #2a2a2e;
-    --accent: #2dd4bf;
-    --accent-hover: #5eead4;
-    --grid: rgb(255 255 255 / 0.06);
-  }
 }
