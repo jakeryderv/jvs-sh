@@ -1,0 +1,26 @@
+# Groups render sorted by `order`. `id` must be unique.
+- id: projects
+  title: projects
+  order: 1
+  links:
+    - label: usdata
+      url: https://github.com/jakeryderv/usdata
+    - label: olympus
+      url: https://github.com/jakeryderv/olympus
+    - label: pi-dev
+      url: https://github.com/jakeryderv/pi-dev
+    - label: prism
+      url: https://github.com/jakeryderv/prism
+    - label: nba-db
+      url: https://github.com/jakeryderv/nba-db
+    - label: pkgs
+      url: https://pkgs.jvs.sh
+
+- id: elsewhere
+  title: elsewhere
+  order: 2
+  links:
+    - label: github
+      url: https://github.com/jakeryderv
+    - label: email
+      url: mailto:contact@jvs.sh

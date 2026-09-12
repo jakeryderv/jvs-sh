@@ -5,5 +5,5 @@
   // Astro's static build output. No Worker script, no `main`.
   "assets": { "directory": "./dist" },
   "workers_dev": false,
-  "routes": [{ "pattern": "jvs.sh", "custom_domain": true }]
+  "routes": [{ "pattern": "jvs.sh", "custom_domain": true }],
 }

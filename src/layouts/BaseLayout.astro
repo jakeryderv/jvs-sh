@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { GITHUB_URL, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 interface Props {
   title?: string;
@@ -26,10 +26,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
     <meta property="og:site_name" content={SITE_TITLE} />
   </head>
   <body>
-    <main><slot /></main>
-    <footer>
-      <a href={GITHUB_URL}>github</a>
-      <span>© 2026 Jake Van Slyke</span>
-    </footer>
+    <main>
+      <slot />
+    </main>
   </body>
 </html>

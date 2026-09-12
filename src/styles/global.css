@@ -3,7 +3,6 @@
   --bg: #fdfdfc;
   --fg: #1a1a1a;
   --muted: #6b6b6b;
-  --border: #e4e4e2;
   --accent: #2456c9;
 }
 
@@ -12,7 +11,6 @@
     --bg: #141414;
     --fg: #ececea;
     --muted: #9a9a98;
-    --border: #2a2a2a;
     --accent: #8ab4ff;
   }
 }
@@ -25,61 +23,45 @@
 html {
   background: var(--bg);
   color: var(--fg);
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
   font-size: 1.0625rem;
   line-height: 1.6;
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-}
-
-main,
-footer {
-  width: min(60ch, 100% - 2rem);
-  margin-inline: auto;
-}
-
-
 main {
-  flex: 1;
-  padding-block: 3rem;
-}
-
-footer {
-  padding-block: 1.5rem;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.9em;
-  display: flex;
-  gap: 1rem;
-}
-
-footer a {
-  color: var(--muted);
-}
-
-h1,
-h2 {
-  line-height: 1.25;
-  margin-block: 1.75rem 0.75rem;
+  width: min(40ch, 100% - 2rem);
+  margin-inline: auto;
+  padding-block: 4rem;
 }
 
 h1 {
-  font-size: 1.75rem;
-  margin-top: 0;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin-bottom: 2rem;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-block: 1.5rem 0.5rem;
 }
 
-p,
 ul {
-  margin-block: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding-block: 0.15rem;
 }
 
 a {
@@ -90,8 +72,4 @@ a {
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
-}
-
-.muted {
-  color: var(--muted);
 }

@@ -8,6 +8,9 @@
     "build": "astro build",
     "preview": "astro build && wrangler dev",
     "check": "astro check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify": "npm run format:check && npm run check && npm run build",
     "deploy": "astro build && wrangler deploy"
   },
   "dependencies": {
@@ -15,6 +18,8 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^1.0.0",
     "typescript": "^6.0.3",
     "wrangler": "^4.131.1"
   }
