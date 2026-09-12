@@ -37,45 +37,16 @@ body {
   flex-direction: column;
 }
 
-header,
 main,
 footer {
   width: min(60ch, 100% - 2rem);
   margin-inline: auto;
 }
 
-header {
-  display: flex;
-  align-items: baseline;
-  gap: 1.5rem;
-  padding-block: 1.5rem;
-}
-
-header .brand {
-  font-weight: 600;
-  color: var(--fg);
-  text-decoration: none;
-}
-
-header nav {
-  display: flex;
-  gap: 1.25rem;
-  margin-left: auto;
-}
-
-header nav a {
-  color: var(--muted);
-  text-decoration: none;
-}
-
-header nav a:hover,
-header nav a[aria-current='page'] {
-  color: var(--fg);
-}
 
 main {
   flex: 1;
-  padding-block: 1.5rem 3rem;
+  padding-block: 3rem;
 }
 
 footer {

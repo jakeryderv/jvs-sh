@@ -3,19 +3,12 @@ import '../styles/global.css';
 import { GITHUB_URL, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
 }
 
-const { title, description = SITE_DESCRIPTION } = Astro.props;
-const pageTitle = title === SITE_TITLE ? title : `${title} · ${SITE_TITLE}`;
-const current = Astro.url.pathname;
-const canonical = new URL(current, Astro.site ?? Astro.url);
-const nav = [
-  { href: '/', label: 'home' },
-  { href: '/about/', label: 'about' },
-];
-const isCurrent = (href: string) => (href === '/' ? current === '/' : current.startsWith(href));
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
 ---
 
 <!doctype html>
@@ -23,24 +16,16 @@ const isCurrent = (href: string) => (href === '/' ? current === '/' : current.st
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{pageTitle}</title>
+    <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta property="og:title" content={pageTitle} />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={SITE_TITLE} />
   </head>
   <body>
-    <header>
-      <a class="brand" href="/">{SITE_TITLE}</a>
-      <nav aria-label="Main">
-        {nav.map(({ href, label }) => (
-          <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>{label}</a>
-        ))}
-      </nav>
-    </header>
     <main><slot /></main>
     <footer>
       <a href={GITHUB_URL}>github</a>
