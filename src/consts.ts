@@ -6,6 +6,5 @@ export const CONTACT_EMAIL = 'contact@jvs.sh';
 // Top-level pages, in nav order. Adding a page means adding a route and one entry here.
 export const NAV = [
   { href: '/', label: 'home' },
-  { href: '/projects/', label: 'projects' },
   { href: '/about/', label: 'about' },
 ];
