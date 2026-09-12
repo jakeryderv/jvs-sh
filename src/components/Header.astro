@@ -1,0 +1,20 @@
+---
+import { NAV, SITE_TITLE } from '../consts';
+
+const current = Astro.url.pathname;
+// '/' is a prefix of every path, so home only matches exactly.
+const isCurrent = (href: string) => (href === '/' ? current === '/' : current.startsWith(href));
+---
+
+<header>
+  <a class="brand" href="/">
+    {SITE_TITLE}
+  </a>
+  <nav aria-label="Main">
+    {NAV.map(({ href, label }) => (
+      <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>
+        {label}
+      </a>
+    ))}
+  </nav>
+</header>

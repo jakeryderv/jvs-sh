@@ -1,7 +1,10 @@
 # jvs.sh
 
-Link hub, live at https://jvs.sh. Astro, fully static, served from Cloudflare Workers
-as static assets. Links live in `src/data/links.yaml`.
+Personal site, live at https://jvs.sh. Astro, fully static, served from Cloudflare Workers
+as static assets.
+
+Pages are stubs under `src/pages/`. The nav is the `NAV` array in `src/consts.ts`; header and
+footer are components under `src/components/` and wrap every page through `BaseLayout`.
 
 ## Development
 

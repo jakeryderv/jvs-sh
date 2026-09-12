@@ -1,22 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const groups = (await getCollection('links')).sort((a, b) => a.data.order - b.data.order);
 ---
 
 <BaseLayout>
   <h1>Jake Van Slyke</h1>
-  {groups.map(({ data }) => (
-    <section>
-      <h2>{data.title}</h2>
-      <ul>
-        {data.links.map(({ label, url }) => (
-          <li>
-            <a href={url}>{label}</a>
-          </li>
-        ))}
-      </ul>
-    </section>
-  ))}
+  <p class="muted">Home page placeholder.</p>
 </BaseLayout>
