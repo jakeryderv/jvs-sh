@@ -20,9 +20,6 @@ body {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  /* Faint dot grid so an empty page still reads as designed. */
-  background-image: radial-gradient(var(--grid) 1px, transparent 1px);
-  background-size: 24px 24px;
 }
 
 /* Shared column. */

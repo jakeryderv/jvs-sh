@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import Sky from '../components/Sky.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 interface Props {
@@ -20,7 +21,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#111113" />
+    <meta name="theme-color" content="#0b0e14" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -31,6 +32,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
     <meta property="og:site_name" content={SITE_TITLE} />
   </head>
   <body>
+    <Sky />
     <Header />
     <main>
       <slot />
