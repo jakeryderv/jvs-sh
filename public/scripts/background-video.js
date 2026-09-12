@@ -20,6 +20,7 @@ if (video instanceof HTMLVideoElement && toggle instanceof HTMLButtonElement) {
 
     // Defer the download until motion is allowed. The CSS poster also works without JS.
     if (!video.hasAttribute('src')) video.src = video.dataset.src;
+    video.playbackRate = 0.5;
     video.play().catch((error) => {
       if (error.name !== 'AbortError') {
         video.hidden = true;
