@@ -10,6 +10,7 @@ footer are components under `src/components/` and wrap every page through `BaseL
 
 ```
 npm install
+npm run hooks:install # enable the pre-push hook once per clone
 npm run dev       # local dev server
 npm run check     # astro check
 npm run format    # prettier --write
@@ -17,6 +18,10 @@ npm run verify    # format check, astro check, build
 npm run build     # writes dist/
 npm run preview   # build, then serve dist/ through wrangler dev
 ```
+
+The pre-push hook runs `npm run verify` and stops the push if a check fails. It
+checks the current working tree, including uncommitted changes. Cloudflare also
+runs verification before deploying.
 
 Pushing to `main` deploys through Cloudflare Workers Builds, which runs `npm run verify`
 and then `npx wrangler deploy`. To deploy by hand:

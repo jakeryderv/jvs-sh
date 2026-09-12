@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "hooks:install": "git config --local core.hooksPath .githooks",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro build && wrangler dev",
