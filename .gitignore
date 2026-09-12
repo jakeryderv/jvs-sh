@@ -3,3 +3,6 @@ dist/
 .astro/
 .wrangler/
 .env
+
+# Original video; the optimized web copy lives in public/media/.
+/ISS_20251112_071350-20251112_073549_1080p30.mp4

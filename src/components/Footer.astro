@@ -4,4 +4,25 @@ const year = new Date().getFullYear();
 
 <footer>
   <span>© {year} Jake Van Slyke</span>
+  <button id="background-toggle" type="button" aria-controls="background-video" hidden>
+    Play background
+  </button>
 </footer>
+
+<style>
+  button {
+    margin-left: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: var(--fg);
+  }
+</style>

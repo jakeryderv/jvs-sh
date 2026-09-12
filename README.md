@@ -36,6 +36,12 @@ MIT, see [LICENSE](LICENSE).
 
 ## Notes
 
+The background uses `public/media/iss-background.mp4`, a 720p H.264 web copy of
+`ISS_20251112_071350-20251112_073549_1080p30.mp4`. The original stays local and is
+ignored by Git. Playback is muted and looping, with a pause control in the footer.
+Reduced motion shows `public/media/iss-poster.jpg` without downloading the video;
+the poster also works when JavaScript or autoplay is unavailable.
+
 Do not add a long-lived `Cache-Control` rule for `/_astro/*` in `public/_headers`. The rule
 also applies to 404 responses under that path, so an asset URL requested during a deploy
 rollout can get its 404 cached at the edge for the full max-age. The default asset headers
