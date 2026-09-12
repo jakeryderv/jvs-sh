@@ -1,0 +1,126 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fdfdfc;
+  --fg: #1a1a1a;
+  --muted: #6b6b6b;
+  --border: #e4e4e2;
+  --accent: #2456c9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141414;
+    --fg: #ececea;
+    --muted: #9a9a98;
+    --border: #2a2a2a;
+    --accent: #8ab4ff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main,
+footer {
+  width: min(60ch, 100% - 2rem);
+  margin-inline: auto;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+}
+
+header .brand {
+  font-weight: 600;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+header nav {
+  display: flex;
+  gap: 1.25rem;
+  margin-left: auto;
+}
+
+header nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+header nav a:hover,
+header nav a[aria-current='page'] {
+  color: var(--fg);
+}
+
+main {
+  flex: 1;
+  padding-block: 1.5rem 3rem;
+}
+
+footer {
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9em;
+  display: flex;
+  gap: 1rem;
+}
+
+footer a {
+  color: var(--muted);
+}
+
+h1,
+h2 {
+  line-height: 1.25;
+  margin-block: 1.75rem 0.75rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+p,
+ul {
+  margin-block: 0.75rem;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.muted {
+  color: var(--muted);
+}

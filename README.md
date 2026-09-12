@@ -1,16 +1,20 @@
 # jvs.sh
 
-Placeholder for a personal site, live at https://jvs.sh. One static page served from
-Cloudflare Workers.
+Personal site, live at https://jvs.sh. Astro, fully static, served from Cloudflare
+Workers as static assets.
 
 ## Development
 
 ```
 npm install
-npm run dev
+npm run dev       # local dev server
+npm run check     # astro check
+npm run build     # writes dist/
+npm run preview   # build, then serve dist/ through wrangler dev
 ```
 
-Pushing to `main` deploys through Cloudflare Workers Builds. To deploy by hand:
+Pushing to `main` deploys through Cloudflare Workers Builds, which runs `npm run build`
+and then `npx wrangler deploy`. To deploy by hand:
 
 ```
 npm run deploy

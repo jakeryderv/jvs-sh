@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { GITHUB_URL } from '../consts';
+---
+
+<BaseLayout title="about" description="About Jake Van Slyke">
+  <h1>About</h1>
+  <p>
+    I'm Jake, a student at the University of Oklahoma Polytechnic Institute studying
+    applied artificial intelligence.
+  </p>
+  <p>
+    Most of my work sits where machine learning meets engineering. Lately that means
+    developer tooling for coding agents, and Python libraries for finding and tracking
+    public scientific data.
+  </p>
+
+  <h2>Elsewhere</h2>
+  <p>
+    <a href={GITHUB_URL}>GitHub</a>
+  </p>
+</BaseLayout>

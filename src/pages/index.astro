@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { GITHUB_URL, SITE_TITLE } from '../consts';
+---
+
+<BaseLayout title={SITE_TITLE}>
+  <h1>Jake Van Slyke</h1>
+  <p>
+    Applied AI student. I build agent tooling in TypeScript and data tooling in Python,
+    and I like small systems that are easy to reason about.
+  </p>
+  <p>
+    <a href="/about/">More about me</a> or see what I'm working on
+    <a href={GITHUB_URL}>on GitHub</a>.
+  </p>
+</BaseLayout>
